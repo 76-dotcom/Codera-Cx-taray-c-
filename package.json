@@ -1,0 +1,50 @@
+{
+  "name": "codera-cx",
+  "version": "1.0.0",
+  "productName": "Codera CX",
+  "author": "CodeCraftTR",
+  "description": "Codera CX desktop browser.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis portable --x64",
+    "dist:setup": "electron-builder --win nsis --x64",
+    "dist:portable": "electron-builder --win portable --x64"
+  },
+  "devDependencies": {
+    "electron-builder": "^26.0.12",
+    "electron": "^44.7.0"
+  },
+  "build": {
+    "appId": "com.codera.cx",
+    "productName": "Codera CX",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "LICENSE.txt",
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "styles.css",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "artifactName": "${productName} ${version} Setup.${ext}"
+    },
+    "portable": {
+      "artifactName": "${productName} ${version} Portable.${ext}"
+    }
+  }
+}

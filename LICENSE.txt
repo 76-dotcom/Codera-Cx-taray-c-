@@ -1,0 +1,34 @@
+CODERA CX PERSONAL-USE LICENSE
+
+Copyright (c) 2026 CodeCraftTR. All rights reserved.
+
+1. Permission
+
+CodeCraftTR grants the individual user a free, personal, non-exclusive,
+non-transferable license to install and use Codera CX for personal,
+non-commercial purposes.
+
+2. Restrictions
+
+Without prior written permission from CodeCraftTR, you may not:
+
+- use Codera CX for commercial purposes;
+- redistribute, republish, sell, sublicense, or rent Codera CX;
+- distribute a modified, repackaged, or derivative copy of Codera CX; or
+- remove or alter this license or copyright notice.
+
+3. Third-party components
+
+Third-party software and services accessed through Codera CX are not licensed
+by this document. Their respective owners' terms and licenses continue to
+apply.
+
+4. Disclaimer
+
+Codera CX is provided "AS IS", without warranty of any kind, to the extent
+permitted by applicable law.
+
+For commercial use or redistribution permission, contact CodeCraftTR and
+obtain written authorization before proceeding.
+
+License holder: CodeCraftTR

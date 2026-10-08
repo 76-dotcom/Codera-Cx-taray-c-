@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data: https:; connect-src 'self' https: wss:; frame-src http: https:; child-src http: https:; object-src 'none'; base-uri 'self';"
+    >
+    <title>Codera CX</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="browser">
+      <aside class="sidebar" aria-label="Kenar çubuğu">
+        <div class="brand-mark" title="Codera CX">C<span>X</span></div>
+        <div class="sidebar-rule"></div>
+        <button class="side-button active" type="button" title="Tarayıcı" aria-label="Tarayıcı">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3.5 9h17M9 3.5c2.4 2.4 3.2 5.1 3.2 8.5s-1 6.3-3.2 9M15 3.5c-2.4 2.4-3.2 5.1-3.2 8.5s1 6.3 3.2 9"></path></svg>
+        </button>
+        <button class="side-button" type="button" title="Yer imleri" aria-label="Yer imleri">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21l-6-4-6 4z"></path></svg>
+        </button>
+        <button id="goodbyedpi-open" class="side-button" type="button" title="GoodbyeDPI — DPI aracını aç" aria-label="GoodbyeDPI ayarlarını aç">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3m0 12v3m9-9h-3M6 12H3m15.36-6.36-2.12 2.12M7.76 16.24l-2.12 2.12m12.72 0-2.12-2.12M7.76 7.76 5.64 5.64"></path><circle cx="12" cy="12" r="4"></circle></svg>
+        </button>
+        <button id="license-open" class="side-button" type="button" title="Lisans" aria-label="Lisansı görüntüle">©</button>
+        <div class="sidebar-spacer"></div>
+        <button class="side-button" type="button" title="Ayarlar" aria-label="Ayarlar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="m19.4 15 .1.1 1.4 1.1-1.4 2.4-1.7-.6a7.9 7.9 0 0 1-1.6.9l-.3 1.8h-2.8l-.3-1.8a7.9 7.9 0 0 1-1.6-.9l-1.7.6-1.4-2.4 1.4-1.1a7 7 0 0 1 0-1.9l-1.4-1.2 1.4-2.4 1.7.7a7.9 7.9 0 0 1 1.6-.9l.3-1.8h2.8l.3 1.8a7.9 7.9 0 0 1 1.6.9l1.7-.7 1.4 2.4-1.4 1.2a7 7 0 0 1 0 1.8Z" transform="translate(-1 -1) scale(1.08)"></path></svg>
+        </button>
+        <div class="profile-dot" title="Profil">O</div>
+      </aside>
+
+      <main class="main-area">
+        <div class="tab-strip" role="tablist" aria-label="Sekmeler">
+          <div id="tabs" class="tabs"></div>
+          <button id="new-tab" class="new-tab" type="button" title="Yeni sekme (Ctrl+T)" aria-label="Yeni sekme">+</button>
+          <div class="window-space" aria-hidden="true"></div>
+        </div>
+
+        <div class="toolbar">
+          <button id="back" class="tool-button" type="button" title="Geri" aria-label="Geri" disabled>‹</button>
+          <button id="forward" class="tool-button" type="button" title="İleri" aria-label="İleri" disabled>›</button>
+          <button id="reload" class="tool-button" type="button" title="Yenile" aria-label="Yenile">↻</button>
+          <button id="home" class="tool-button" type="button" title="Ana sayfa" aria-label="Ana sayfa">⌂</button>
+          <form id="address-form" class="address-form">
+            <span class="address-lock" aria-hidden="true">◇</span>
+            <input id="address" type="text" placeholder="Web'de ara veya adres gir" aria-label="Web'de ara veya adres gir" autocomplete="off" spellcheck="false">
+            <button id="bookmark" class="bookmark-button" type="button" title="Bu sayfayı yer imlerine ekle" aria-label="Yer imlerine ekle">☆</button>
+          </form>
+          <button class="tool-button utility-button" type="button" title="Uzantılar" aria-label="Uzantılar">⌘</button>
+          <button class="profile-button" type="button" title="Profil">C</button>
+        </div>
+
+        <section id="browser-content" class="browser-content" aria-label="Sayfa içeriği"></section>
+        <div id="notice" class="notice" role="status" aria-live="polite"></div>
+        <section id="goodbyedpi-panel" class="tool-panel" role="dialog" aria-modal="true" aria-labelledby="goodbyedpi-title" hidden>
+          <div class="tool-card">
+            <button id="goodbyedpi-close" class="tool-close" type="button" aria-label="Kapat">×</button>
+            <div class="tool-eyebrow">CODERA CX · AĞ ARACI</div>
+            <h2 id="goodbyedpi-title">GoodbyeDPI</h2>
+            <p class="tool-description">Bazı internet servis sağlayıcılarındaki DPI tabanlı site engellerini aşmaya yardımcı olan Windows aracı.</p>
+            <div id="goodbyedpi-state" class="tool-state" role="status">Durum kontrol ediliyor…</div>
+            <div id="goodbyedpi-path" class="tool-path">Uygulama seçilmedi</div>
+            <div class="tool-actions">
+              <button id="goodbyedpi-select" class="tool-action secondary" type="button">Uygulamayı seç</button>
+              <button id="goodbyedpi-toggle" class="tool-action primary" type="button" disabled>Başlat</button>
+            </div>
+            <button id="goodbyedpi-download" class="tool-download" type="button">Resmî GoodbyeDPI sürümlerini aç ↗</button>
+            <p class="tool-warning">Bu bir VPN değildir; trafiği şifrelemez, IP adresini gizlemez ve her siteye erişim garantisi vermez. Başlatma/durdurma sırasında Windows yönetici izni istenir. Tarayıcı kapanınca araç çalışmaya devam edebilir; durdurmak için buradaki düğmeyi kullan.</p>
+          </div>
+        </section>
+        <section id="license-panel" class="tool-panel" role="dialog" aria-modal="true" aria-labelledby="license-title" hidden>
+          <div class="tool-card license-card">
+            <button id="license-close" class="tool-close" type="button" aria-label="Kapat">×</button>
+            <div class="tool-eyebrow">CODERA CX · LİSANS</div>
+            <h2 id="license-title">Özel kullanım lisansı</h2>
+            <p class="tool-description">Codera CX, CodeCraftTR tarafından sağlanan özel lisans koşullarıyla sunulur.</p>
+            <div class="license-copy">
+              <p>© 2026 CodeCraftTR. Tüm hakları saklıdır.</p>
+              <p>Bu lisans, Codera CX yazılımını kişisel ve ticari olmayan amaçlarla ücretsiz kullanma hakkı verir.</p>
+              <p>CodeCraftTR'nin önceden yazılı izni olmadan yazılımı veya bu yazılımın değiştirilmiş ya da yeniden paketlenmiş bir kopyasını dağıtmak, yeniden yayımlamak, satmak veya ticari amaçla kullanmak yasaktır.</p>
+              <p>Codera CX ile birlikte dağıtılan üçüncü taraf bileşenler kendi lisans koşullarına tabidir. Bu lisans, söz konusu bileşenlerin lisanslarını değiştirmez.</p>
+              <p>Yazılım, yürürlükteki mevzuatın izin verdiği ölçüde, açık veya zımni herhangi bir garanti olmadan sunulur.</p>
+            </div>
+            <div class="license-signature">Lisans sahibi: <strong>CodeCraftTR</strong></div>
+            <p class="tool-warning">Bu lisans bilgilendirme amaçlı bir başlangıç metnidir. Yayın veya ticari kullanım öncesinde lisans koşullarını hukuk danışmanınızla gözden geçirin.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>
